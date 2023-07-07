@@ -1,88 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:pix_test_1/Utils/consts.dart';
+import 'View/Affordance/affordance.dart';
+import 'View/Pages/Home/home.dart';
+import 'View/Pages/Widgets/carousel.dart';
 
-void main() 
-{
-  runApp(const App());
+void main() {
+  runApp(const MyApp());
 }
 
-class App extends StatelessWidget 
-{
-  const App({super.key});
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) 
-  {
-    return MaterialApp
-    (
-      title: 'Flutter Demo',
-      theme: ThemeData
-      (
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
+  State<MyApp> createState() => _MyAppState();
 }
 
-class HomePage extends StatefulWidget 
-{
-  const HomePage({super.key, required this.title});
-
-  final String title;
-
+class _MyAppState extends State<MyApp> {
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> 
-{
-  int _counter = 0;
-
-  void _incrementCounter() 
-  {
-    setState
-    (
-      () 
-      {
-        _counter++;
-      }
-    );
+  void initState() {
+    // call to "Immersive Sticky" mode for Android only
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    super.initState();
   }
 
   @override
-  Widget build(BuildContext context) 
-  {
-    return Scaffold
-    (
-      appBar: AppBar
-      (
-        title: Text(widget.title),
-      ),
-      body: Center
-      (
-        child: Column
-        (
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>
-          [
-            const Text
-            (
-              'You have pushed the button this many times:',
-            ),
-            Text
-            (
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton
-      (
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Popcorn',
+        theme: ThemeData(scaffoldBackgroundColor: Consts().Bg100),
+        debugShowCheckedModeBanner: false,
+        routes: {
+          "/": (context) => HomePage(),
+        });
   }
 }
