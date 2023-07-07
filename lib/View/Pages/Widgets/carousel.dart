@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'description.dart';
+
 class Carousel extends StatelessWidget {
   final List<String> imageUrls = [
     'https://i.pinimg.com/1200x/d7/e4/24/d7e424f43fd6b1e995956908e3fde492.jpg',
@@ -9,8 +11,9 @@ class Carousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView.builder(
+    return Container(
+      // ainda não terminei esse widget, como podem ver, ta uma imagem gigante
+      child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: imageUrls.length,
         itemBuilder: (context, index) {
@@ -24,9 +27,9 @@ class Carousel extends StatelessWidget {
               );
             },
             child: Container(
-              margin: EdgeInsets.all(16),
-              width: 200,
-              height: 200,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              margin: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
@@ -37,24 +40,6 @@ class Carousel extends StatelessWidget {
             ),
           );
         },
-      ),
-    );
-  }
-}
-
-class DestinationScreen extends StatelessWidget {
-  final String imageUrl;
-
-  DestinationScreen(this.imageUrl);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Destination'),
-      ),
-      body: Center(
-        child: Image.network(imageUrl),
       ),
     );
   }
