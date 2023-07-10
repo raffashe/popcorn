@@ -40,7 +40,6 @@ class MovieProduct {
 // --- desserialização
 
   factory MovieProduct.fromMap(Map<String, dynamic> map) {
-    print(map);
     return MovieProduct(
       status: map['status'] as String,
       title: map['title'] as String,

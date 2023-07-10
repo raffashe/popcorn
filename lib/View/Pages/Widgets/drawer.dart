@@ -35,8 +35,8 @@ class DrawerHome extends StatelessWidget {
                   //
                   GestureDetector(
                     onTap: () => {
-                      Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (context) => HomePage()))
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => const HomePage()))
                     },
                     child: Row(
                       children: [
