@@ -1,11 +1,12 @@
 # Popcorn
 
-![Popcorn](https://github.com/raffashe/popcorn/assets/87053532/6b01fe9b-359f-4500-87f7-b1ee6f5ea21e)
+![logo](https://github.com/raffashe/popcorn/assets/87053532/02e7eea0-be24-4371-9ef1-07413a25fe6e)
 
 Popcorn é um aplicativo desenvolvido em Flutter que permite aos usuários favoritar filmes, dar feedback positivo e negativo, salvar suas preferências e explorar uma vasta coleção de filmes. 
 ## Visão do projeto
 
-![Popcorn App](https://github.com/raffashe/popcorn/assets/87053532/c3849442-9e05-4cdc-88a4-bc14e8738db1)
+![Figma](https://github.com/raffashe/popcorn/assets/87053532/17f8cb75-fe7b-47db-9eb3-a291316f25e6)
+
 ## Recursos Principais
 
 - Armazenamento local dos dados para uma experiência offline.
@@ -64,4 +65,3 @@ Este projeto está licenciado sob a [MIT License](LICENSE). Sinta-se à vontade 
 
 ---
 
-Esperamos que você desfrute do Popcorn. Fique à vontade para explorar filmes, favoritar seus favoritos e fornecer feedback sobre suas experiências cinematográficas. Divirta-se!
